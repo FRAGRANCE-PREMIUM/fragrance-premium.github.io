@@ -15,8 +15,8 @@ export const BRAND_CONFIG = {
 
   // Official Logo & Visual Assets
   logoImage: '/assets/aistudio/LOGO_aa6bfcf3.png',
-  heroImage: '/src/assets/images/hero_attar_showcase_1790950416319.jpg',
-  craftImage: '/src/assets/images/attar_art_deg_craft_1790950451330.jpg',
+  heroImage: '/images/hero_attar_showcase_1790950416319.jpg',
+  craftImage: '/images/attar_art_deg_craft_1790950451330.jpg',
 
   // Currency & Pricing Symbol
   currencySymbol: '₹',
