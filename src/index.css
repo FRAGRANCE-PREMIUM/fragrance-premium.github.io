@@ -1,0 +1,274 @@
+@import "tailwindcss";
+
+@theme {
+  /* Strict Royal Ivory & Forest Green Luxury Color System */
+  --color-forest-green: #143628;
+  --color-forest-hover: #1F4D3B;
+  --color-forest-dark: #0F281D;
+  --color-forest-accent: #2D6A4F;
+  --color-forest-light: #E8F0EC;
+  --color-champagne-gold: #C5A86A;
+  --color-gold-hover: #D4AF37;
+  --color-warm-ivory: #FAF7F0;
+  --color-ivory-surface: #F5EFE6;
+  --color-pure-white: #FFFFFF;
+  --color-forest-charcoal: #182920;
+  --color-antique-bronze: #7A664F;
+  --color-secondary-bg: #EFE9DC;
+  --color-product-bg: #F8F5EE;
+  --color-brand-border: #D5CEBF;
+  --color-footer-bg: #0F281D;
+  --color-disabled-bg: #E7E1D4;
+  --color-disabled-text: #617367;
+
+  /* Typography */
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@layer base {
+  :root {
+    --forest-green: #143628;
+    --forest-hover: #1F4D3B;
+    --forest-dark: #0F281D;
+    --forest-accent: #2D6A4F;
+    --forest-light: #E8F0EC;
+    --champagne-gold: #C5A86A;
+    --gold-hover: #D4AF37;
+    --warm-ivory: #FAF7F0;
+    --ivory-surface: #F5EFE6;
+    --pure-white: #FFFFFF;
+    --forest-charcoal: #182920;
+    --antique-bronze: #7A664F;
+    --secondary-bg: #EFE9DC;
+    --product-bg: #F8F5EE;
+    --brand-border: #D5CEBF;
+    --footer-bg: #0F281D;
+    --disabled-bg: #E7E1D4;
+    --disabled-text: #617367;
+
+    --font-heading: 'DM Serif Display', Georgia, serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    background: #FAF7F0;
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: #FAF7F0;
+    color: #182920;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: -0.011em;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-serif-luxury {
+    font-family: var(--font-heading);
+    letter-spacing: -0.015em;
+    font-weight: 400;
+    color: #143628;
+  }
+
+  p {
+    font-size: 0.9375rem;
+    color: #182920;
+    line-height: 1.65;
+  }
+
+  /* Contrast on dark forest green & charcoal surfaces */
+  .bg-\[\#143628\] p,
+  .bg-\[\#0F281D\] p,
+  .bg-forest p,
+  .bg-footer p,
+  .text-white p,
+  p.text-white,
+  p.text-warm-ivory {
+    color: inherit;
+  }
+
+  input, textarea, select {
+    font-family: var(--font-body);
+    color: #182920;
+  }
+}
+
+/* Luxury Surfaces & Utilities */
+.bg-warm-ivory {
+  background-color: #FAF7F0;
+}
+
+.bg-secondary-surface {
+  background-color: #EFE9DC;
+}
+
+.bg-forest-green {
+  background-color: #143628;
+}
+
+.bg-forest-dark {
+  background-color: #0F281D;
+}
+
+.bg-footer-dark {
+  background-color: #0F281D;
+}
+
+.bg-champagne-gold {
+  background-color: #C5A86A;
+}
+
+.bg-gold-hover:hover {
+  background-color: #D4AF37;
+}
+
+.text-forest-green {
+  color: #143628;
+}
+
+.text-champagne-gold {
+  color: #C5A86A;
+}
+
+.text-charcoal {
+  color: #182920;
+}
+
+.text-bronze {
+  color: #7A664F;
+}
+
+.border-brand {
+  border-color: #D5CEBF;
+}
+
+.bg-product-surface {
+  background-color: #F8F5EE;
+}
+
+/* Forest Green Button */
+.btn-forest {
+  background-color: #143628;
+  color: #FAF7F0;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-forest:hover {
+  background-color: #1F4D3B;
+  color: #FFFFFF;
+}
+
+/* Backward compatibility for previous classes */
+.btn-burgundy {
+  background-color: #143628;
+  color: #FAF7F0;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-burgundy:hover {
+  background-color: #1F4D3B;
+  color: #FFFFFF;
+}
+
+.text-royal-burgundy {
+  color: #143628;
+}
+
+.bg-royal-burgundy {
+  background-color: #143628;
+}
+
+/* Champagne Gold Button */
+.btn-gold {
+  background-color: #C5A86A;
+  color: #0F281D;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-gold:hover {
+  background-color: #D4AF37;
+  color: #0F281D;
+}
+
+/* Outlined Ivory / Gold Button */
+.btn-outline-gold {
+  border: 1px solid #C5A86A;
+  color: #FAF7F0;
+  background-color: transparent;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-outline-gold:hover {
+  background-color: rgba(197, 168, 106, 0.18);
+  border-color: #D4AF37;
+}
+
+/* Subtle 1.03x Product Image Zoom */
+.product-card-zoom {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .product-card-zoom {
+  transform: scale(1.03);
+}
+
+/* Hide scrollbar for category tabs while maintaining scrollability */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Premium Animated Tab Styles */
+.tab-premium {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.tab-premium:hover {
+  transform: translateY(-1.5px) scale(1.02);
+  letter-spacing: 0.13em;
+  color: #143628;
+}
+.tab-premium:active {
+  transform: translateY(0.5px) scale(0.98);
+}
+.tab-premium::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #C5A86A, #143628, transparent);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(-50%);
+  opacity: 0;
+  border-radius: 9999px;
+}
+.tab-premium:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.pill-tab-premium {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.pill-tab-premium:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(20, 54, 40, 0.08);
+}
+.pill-tab-premium:active {
+  transform: translateY(1px) scale(0.97);
+}
