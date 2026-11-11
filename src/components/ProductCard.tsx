@@ -72,27 +72,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       onClick={handleCardClick}
       className="group bg-white border border-[#D5CEBF] hover:border-[#143628] rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-lg flex flex-col cursor-pointer"
     >
-      {/* Full-Frame Uniform Visual Showcase:
-          - The background maintains the exact ambient scenery of each inserted photo (100% natural, NO black, NO artificial solid canvas)
-          - No image remains smaller than the frame (100% edge-to-edge coverage via photo extension)
-          - Crisp foreground product is safely zoomed (scale-[1.04]) so zero bottles or packaging boxes get cut
-      */}
-    <div className="relative aspect-video w-full overflow-hidden bg-[#FAF7F0] border-b border-[#D5CEBF]/60">
-        <img
-          src={product.image}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-        />
-
-        {/* Layer 2: Main crisp, uncropped product photo gently zoomed to fill the frame safely */}
-        <img
-          src={product.image}
-          alt={product.name}
-          referrerPolicy="no-referrer"
-          className="relative z-10 w-full h-full object-contain object-center scale-[1.04] group-hover:scale-[1.09] transition-transform duration-500 drop-shadow-md"
-          loading="lazy"
-        />
+      {/* Fixed 16:9 image frame, single image, no blur, no layers */}
+<div className="relative aspect-video w-full overflow-hidden bg-[#FAF7F0] border-b border-[#D5CEBF]/60">
+  <img
+    src={product.image}
+    alt={product.name}
+    referrerPolicy="no-referrer"
+    loading="lazy"
+    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+  />
 
         {/* Minimal Subtle Badge (Top Left) */}
         <div className="absolute top-2.5 left-2.5 z-20 flex flex-wrap items-center gap-1.5 max-w-[88%]">
