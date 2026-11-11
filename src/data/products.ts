@@ -419,7 +419,7 @@ export const PRODUCTS: Product[] = [
       'Pounds 3ml pure non-alcoholic attar. A delicately sweet, comforting English rose and powder accord with warm golden undertones.',
     longDescription:
       'Pounds delivers a velvety floral signature reminiscent of high-end vintage botanical beauty. Packaged in an elongated pink 12-piece master box with gold foil lettering and matching 3ml cartons. Pure concentrated perfume oil.',
-    image: '/assets/aistudio/POUNDS_c8e0dffe.png',
+    image: '/images/Luxury_Rose_Perfume_Display.png',
     sizes: [
       { ml: 3, label: '3ml Single Flacon (₹40)', price: 40, inStock: true },
       { ml: 36, label: 'Complete 12 Pcs Box Pack (₹40 × 12)', price: 480, inStock: true },
