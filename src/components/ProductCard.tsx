@@ -79,7 +79,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     alt={product.name}
     referrerPolicy="no-referrer"
     loading="lazy"
-    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+    className="absolute inset-0 w-full h-full object-contain object-center bg-[#FAF7F0] transition-transform duration-500 group-hover:scale-[1.03]"
   />
 
         {/* Minimal Subtle Badge (Top Left) */}
