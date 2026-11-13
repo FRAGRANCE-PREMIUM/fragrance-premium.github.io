@@ -88,7 +88,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
               id: 'hajre-aswad-6-Pure Attar Oil',
               productId: 'hajre-aswad',
               name: 'Hajre Aswad',
-              image: '/src/assets/images/al_nuaim_hajre_aswad.jpeg',
+              image: '/images/al_nuaim_hajre_aswad.jpeg',
               category: 'Amber',
               ml: 6,
               variant: 'Pure Attar Oil',

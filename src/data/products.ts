@@ -1104,7 +1104,7 @@ export const PRODUCTS: Product[] = [
       'Black Mischief from the exclusive Dark Collection. A magnetic blend of dark woods, smoky accords, and intense spicy undertones in a protective cylindrical tin canister.',
     longDescription:
       'Indulge in the enigmatic allure of Black Mischief. Part of the renowned Dark Collection, this 6ml non-alcoholic roll-on attar is enclosed in an airtight protective cylindrical metallic canister (Metal Canister). Boasts an opulent fusion of smoky woods, dark spices, and amber accords that react with body heat to release a powerful, long-lasting presence.',
-    image: '/src/assets/images/al_nuaim_black_mischief.webp',
+    image: '/images/al_nuaim_black_mischief.webp',
     sizes: [
       { ml: 6, label: '6ml Pure Attar Roll-On', price: 140, inStock: true },
     ],
@@ -1138,7 +1138,7 @@ export const PRODUCTS: Product[] = [
       'Blue Sport is an ultra-refreshing alcohol-free roll-on attar in a sleek cylindrical tin. Delivers a brisk wave of iced mint, ocean breeze, and clean cedarwood.',
     longDescription:
       'Engineered for energy and effortless confidence, Blue Sport delivers an invigorating blast of cool aquatic and citrus accords. Packed in an airtight protective metallic canister (Metal Canister), this convenient 6ml roll-on bottle keeps you smelling clean, crisp, and revitalized throughout workouts and summer heat.',
-    image: '/src/assets/images/al_nuaim_blue_sport.jpg',
+    image: '/images/al_nuaim_blue_sport.jpg',
     sizes: [
       { ml: 6, label: '6ml Pure Attar Roll-On', price: 140, inStock: true },
     ],
@@ -1172,7 +1172,7 @@ export const PRODUCTS: Product[] = [
       'Figo Red from the prestigious Gold Series. A dynamic, passionate fragrance oil blending radiant fruity-spicy notes in an airtight protective tin canister.',
     longDescription:
       'From the Gold Series collection, Figo Red is a celebration of vibrant warmth and charismatic allure. Packaged in a signature cylindrical red and gold metal canister (Metal Canister) with a precision roll-on tip, this alcohol-free attar envelops the skin in a warm, inviting cocoon of spiced berries, exotic florals, and velvety amber-vanilla.',
-    image: '/src/assets/images/al_nuaim_figo_red.jpg',
+    image: '/images/al_nuaim_figo_red.jpg',
     sizes: [
       { ml: 6, label: '6ml Pure Attar Roll-On', price: 140, inStock: true },
     ],
@@ -1206,7 +1206,7 @@ export const PRODUCTS: Product[] = [
       'Forever is a beloved classic oriental attar roll-on in a cylindrical metal canister. A delicate, long-lasting tapestry of white florals and warm cashmere musk.',
     longDescription:
       'True to its name, Forever lingers on skin and clothes with enduring grace. 100% free from alcohol in a 6ml roll-on applicator protected by a cylindrical gold-bronze metal canister (Metal Canister), it balances creamy white floral petals with soft musks and delicate sweet woods.',
-    image: '/src/assets/images/al_nuaim_forever.jpg',
+    image: '/images/al_nuaim_forever.jpg',
     sizes: [
       { ml: 6, label: '6ml Pure Attar Roll-On', price: 140, inStock: true },
     ],
@@ -1240,7 +1240,7 @@ export const PRODUCTS: Product[] = [
       'Hajre Aswad captures the sacred, soul-stirring olfactory atmosphere of the holy precincts. Presented in an authentic airtight metal canister.',
     longDescription:
       'Inspired by the revered Hajre Aswad, this pure 6ml non-alcoholic attar exudes an aura of profound tranquility and devotion. Encased in a protective cylindrical black metal canister (Metal Canister), its rich composition features dark musk, frankincense, amber, and aged agarwood that gently wraps the senses in an atmosphere of prayer.',
-    image: '/src/assets/images/al_nuaim_hajre_aswad.jpeg',
+    image: '/images/al_nuaim_hajre_aswad.jpeg',
     sizes: [
       { ml: 6, label: '6ml Pure Attar Roll-On', price: 140, inStock: true },
     ],
@@ -1274,7 +1274,7 @@ export const PRODUCTS: Product[] = [
       'Black Musk from the Dark Collection in a protective cylindrical metallic can. An earthy, opulent black musk attar that melts into the skin.',
     longDescription:
       'Black Musk is renowned for its intense, skin-warming depth. Formulated with 0% alcohol in a 6ml precision roll-on flacon inside an airtight matte black metallic canister (Metal Canister), this pure attar reveals facets of dark animalic musk, warm amber, and aged woods.',
-    image: '/src/assets/images/al_nuaim_black_musk.webp',
+    image: '/images/al_nuaim_black_musk.webp',
     sizes: [
       { ml: 6, label: '6ml Pure Attar Roll-On', price: 140, inStock: true },
     ],
@@ -1308,7 +1308,7 @@ export const PRODUCTS: Product[] = [
       'Desire Black from the Dark Collection. An alluring, masculine fragrance oil in a cylindrical metal can featuring rich warm spices and golden amber.',
     longDescription:
       'Designed for bold charisma, Desire Black envelops the senses in a sophisticated aura. Protected inside a cylindrical brushed metallic canister (Metal Canister), the 6ml roll-on oil delivers concentrated longevity without alcohol, transitioning from zesty top notes to a smoldering base of musk and amber.',
-    image: '/src/assets/images/al_nuaim_desire_black.webp',
+    image: '/images/al_nuaim_desire_black.webp',
     sizes: [
       { ml: 6, label: '6ml Pure Attar Roll-On', price: 140, inStock: true },
     ],
@@ -1342,7 +1342,7 @@ export const PRODUCTS: Product[] = [
       'Open Black 6ml concentrated attar in an authentic metal canister. A distinguished woody-aromatic composition with crisp lavender and deep masculine cedar.',
     longDescription:
       'Inspired by vintage French perfumery, Open Black provides an assertive yet gentlemanly aura. Features sharp herbal greens and velvety tobacco-wood on an alcohol-free oil base, sealed in a classic cylindrical metallic canister (Metal Canister) for maximum freshness.',
-    image: '/src/assets/images/al_nuaim_open_black.webp',
+    image: '/images/al_nuaim_open_black.webp',
     sizes: [
       { ml: 6, label: '6ml Pure Attar Roll-On', price: 140, inStock: true },
     ],
@@ -1376,7 +1376,7 @@ export const PRODUCTS: Product[] = [
       'Makkah captures the sacred warmth of the holy city in a protective cylindrical tin. Sweet fruity-amber accords, honeyed florals, and spiritual resins.',
     longDescription:
       'One of the most cherished devotional fragrances in the world. Makkah blends sweet wild strawberry and orange blossom with rich balsamic amber and soft musk. Packaged inside a protective cylindrical metal canister (Metal Canister), perfect for prayers and serene daily wear.',
-    image: '/src/assets/images/al_nuaim_makkah.webp',
+    image: '/images/al_nuaim_makkah.webp',
     sizes: [
       { ml: 6, label: '6ml Pure Attar Roll-On', price: 140, inStock: true },
     ],
@@ -1410,7 +1410,7 @@ export const PRODUCTS: Product[] = [
       'Swiss Firdaus translates to "Heaven of the Alps". An invigorating green floral attar in a cylindrical metallic canister brimming with fresh mountain herbs.',
     longDescription:
       'A pristine botanical masterpiece, Swiss Firdaus delivers a breath of cool mountain breeze. Formulated with 0% alcohol and housed in a protective cylindrical crimson metal canister (Metal Canister), its rich emerald profile opens with crisp botanicals that settle into an uplifting drydown.',
-    image: '/src/assets/images/al_nuaim_swiss_firdaus.webp',
+    image: '/images/al_nuaim_swiss_firdaus.webp',
     sizes: [
       { ml: 6, label: '6ml Pure Attar Roll-On', price: 140, inStock: true },
     ],
@@ -1444,7 +1444,7 @@ export const PRODUCTS: Product[] = [
       'Zam Zam is an exceptionally clean, soothing spiritual attar in an airtight metal can. Crystal aqua freshness, soft white florals, and pure calming skin-musk.',
     longDescription:
       'Formulated in honor of the blessed waters, Zam Zam provides a feeling of tranquility, purification, and peace. Shielded from heat and light inside a cylindrical royal-blue metallic canister (Metal Canister), its gentle aqueous and dewy petal notes glide effortlessly onto pulse points.',
-    image: '/src/assets/images/al_nuaim_zam_zam.webp',
+    image: '/images/al_nuaim_zam_zam.webp',
     sizes: [
       { ml: 6, label: '6ml Pure Attar Roll-On', price: 140, inStock: true },
     ],
@@ -1478,7 +1478,7 @@ export const PRODUCTS: Product[] = [
       'Denim Black from the Dark Collection in a cylindrical metal canister. Rugged patchouli, dry cedarwood, and invigorating citrus-herbal zest.',
     longDescription:
       'Crafted for the modern adventurous spirit, Denim Black offers an unmistakable signature of rugged confidence. Enclosed in an airtight cylindrical metal canister (Metal Canister), this alcohol-free concentrated perfume oil in a travel-ready 6ml roll-on bottle delivers commanding staying power.',
-    image: '/src/assets/images/al_nuaim_denim_black.jpg',
+    image: '/images/al_nuaim_denim_black.jpg',
     sizes: [
       { ml: 6, label: '6ml Pure Attar Roll-On', price: 140, inStock: true },
     ],
@@ -1512,7 +1512,7 @@ export const PRODUCTS: Product[] = [
       'Royal Black Sport 6ml roll-on perfume oil in a metal tin canister. Iced citrus, aquatic sea breeze, and grounding dark woods engineered for freshness.',
     longDescription:
       'For athletes and high-energy days, Royal Black Sport delivers cooling freshness that refuses to fade. Protected in a high-durability cylindrical metallic canister (Metal Canister), its clean oceanic and dark cedar facets stay vibrant through intense heat and workouts.',
-    image: '/src/assets/images/al_nuaim_royal_black_sport.webp',
+    image: '/images/al_nuaim_royal_black_sport.webp',
     sizes: [
       { ml: 6, label: '6ml Pure Attar Roll-On', price: 140, inStock: true },
     ],
@@ -1546,7 +1546,7 @@ export const PRODUCTS: Product[] = [
       'White London 6ml roll-on attar in an iconic metal canister. An exquisitely refined European-style oriental scent blending crisp lavender and white cedarwood.',
     longDescription:
       'Inspired by the timeless sophistication of London streetscapes, White London combines crisp modern freshness with pure attar oil potency. Sealed in an airtight cylindrical metal canister (Metal Canister) with vibrant union design accents.',
-    image: '/src/assets/images/al_nuaim_white_london.jpg',
+    image: '/images/al_nuaim_white_london.jpg',
     sizes: [
       { ml: 6, label: '6ml Pure Attar Roll-On', price: 140, inStock: true },
     ],
@@ -1584,7 +1584,7 @@ export const PRODUCTS: Product[] = [
       'Figo Black 6ml roll-on perfume oil in a sleek windowed carton box. A sophisticated modern attar opening with bright citrus and aquatic freshness.',
     longDescription:
       'Figo Black represents modern urban sophistication. Crafted with 0% alcohol in a sleek 6ml roll-on flacon inside an elegant rigid paperboard carton box (Carton Box Edition), it transitions smoothly from sharp citrus-green facets to a refined aquatic heart and rich cedarwood.',
-    image: '/src/assets/images/al_nuaim_figo_black.webp',
+    image: '/images/al_nuaim_figo_black.webp',
     sizes: [
       { ml: 6, label: '6ml Pure Attar Roll-On', price: 140, inStock: true },
     ],
