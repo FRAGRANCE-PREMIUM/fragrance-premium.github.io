@@ -339,7 +339,7 @@ export const PRODUCTS: Product[] = [
       'Ruh Gulab 3ml alcohol-free concentrated roll-on by Globe Brand. A breathtaking, authentic essence of fresh blooming Damask roses and soothing floral nectar.',
     longDescription:
       'Ruh Gulab is the crowning jewel of classical Indian ittar. Hydrodistilled from thousands of fresh rose petals without alcohol or chemicals. Presented in a 12-piece master display box with individual 3ml cartons. Exceptional longevity and pure spiritual serenity.',
-    image: '/assets/aistudio/Ruh_Gulab_Romantic_Rose_Display_fac9e1ad.png',
+    image: image: '/images/Ruh_Gulab_Romantic_Rose_Display.png',
     sizes: [
       { ml: 3, label: '3ml Single Flacon (₹40)', price: 40, inStock: true },
       { ml: 36, label: 'Complete 12 Pcs Box Pack (₹40 × 12)', price: 480, inStock: true },
@@ -419,7 +419,7 @@ export const PRODUCTS: Product[] = [
       'Pounds 3ml pure non-alcoholic attar. A delicately sweet, comforting English rose and powder accord with warm golden undertones.',
     longDescription:
       'Pounds delivers a velvety floral signature reminiscent of high-end vintage botanical beauty. Packaged in an elongated pink 12-piece master box with gold foil lettering and matching 3ml cartons. Pure concentrated perfume oil.',
-    image: '/assets/aistudio/Luxury_Rose_Perfume_Display_32a404ba.png',
+    image: '/images/Luxury_Rose_Perfume_Display.png',
     sizes: [
       { ml: 3, label: '3ml Single Flacon (₹40)', price: 40, inStock: true },
       { ml: 36, label: 'Complete 12 Pcs Box Pack (₹40 × 12)', price: 480, inStock: true },
@@ -459,7 +459,7 @@ export const PRODUCTS: Product[] = [
       'Rajnigandha 3ml concentrated perfume roll-on by Globe Brand. Authentic Indian night-blooming tuberose with opulent, hypnotic white floral sweetness.',
     longDescription:
       'Rajnigandha (Tuberose) is famous for its rich, intoxicating sillage that blooms intensely as night falls. Formulated with pure botanical essence and 0% alcohol. Comes in a fresh green-and-white 12-piece master display box with individual 3ml cartons.',
-    image: '/assets/aistudio/Rajanigandha_Attar_Botanical_Display_252433a3.png',
+    image: '/images/Rajanigandha_Attar_Botanical_Display.png',
     sizes: [
       { ml: 3, label: '3ml Single Flacon (₹40)', price: 40, inStock: true },
       { ml: 36, label: 'Complete 12 Pcs Box Pack (₹40 × 12)', price: 480, inStock: true },
@@ -579,7 +579,7 @@ export const PRODUCTS: Product[] = [
       'Royale Propaicy 3ml luxury concentrated perfume oil. An aristocratic formulation of golden ambergris, noble woods, and warm aromatic spices.',
     longDescription:
       'Royale Propaicy is crafted for discerning connoisseurs who seek a rich, sophisticated ambery presence. Housed in a pristine white and gold 12-piece presentation box with individual 3ml cartons. 100% non-alcoholic roll-on with stainless-steel roller.',
-    image: '/assets/aistudio/Royale_Propaicy_Product_Still_Life_ee7e2afa.png',
+    image: '/images/Royale_Propaicy_Product_Still_Life.png',
     sizes: [
       { ml: 3, label: '3ml Single Flacon (₹40)', price: 40, inStock: true },
       { ml: 36, label: 'Complete 12 Pcs Box Pack (₹40 × 12)', price: 480, inStock: true },
@@ -663,7 +663,7 @@ export const PRODUCTS: Product[] = [
       'Kosturi No. 1 pure authentic deer musk desert balm by Maeea Perfumery. The only non-liquid desert aromatic in our store — compact circular tin at ₹50 or complete 20 Pcs master case for ₹1,000.',
     longDescription:
       'Kosturi No. 1 is our exclusive traditional solid perfume balm ("Desert Solid Balm"). Unlike conventional liquid roll-on flacons or sprays, this rare deer musk formulation is a solid aromatic paste housed in a sealed circular tin compact with the authentic jumping deer trade mark. Applied directly with fingertips to pulse points and beard for an intimate, warm, spiritual musk sillage that lasts all day. Available as an individual 1 Pc compact for ₹50, or in the complete 20-piece wooden-finish master presentation case for ₹1,000.',
-    image: '/assets/aistudio/Luxurious_Kasturi_Perfumery_Still_Life_ab6e85d6.png',
+    image: '/images/Luxurious_Kasturi_Perfumery_Still_Life.png',
     sizes: [
       { ml: 5, label: '1 Pc Desert Solid Balm Compact (₹50)', price: 50, inStock: true },
       { ml: 100, label: 'Complete 20 Pcs Master Box Case (₹1,000)', price: 1000, inStock: true },
@@ -2271,7 +2271,7 @@ export const PRODUCTS: Product[] = [
       'Original Freshia 9.9ml non-alcoholic roll-on attar. An invigorating symphony of sparkling citrus, cool ozone florals, and velvety white musk crafted for timeless daytime refinement.',
     longDescription:
       'Celebrated worldwide for its irresistible crisp energy, Freshia is formulated with 0% alcohol and 100% pure concentrated fragrance oils. Bottled in an elegant scarlet-matte glass flacon featuring an ultra-smooth stainless steel roll-on applicator. Freshia glides seamlessly onto pulse points, diffusing an uplifting wave of dewy citrus and airy florals that lasts throughout the day even in high humidity.',
-    image: '/assets/aistudio/freshia_al_nuaim_1a957173.webp',
+    image: '/images/freshia_al_nuaim.webp',
     sizes: [
       { ml: 9.9, label: '9.9ml Pure Roll-On Flacon', price: 200, inStock: true },
     ],
@@ -2335,7 +2335,7 @@ export const PRODUCTS: Product[] = [
       'Signature 20ml concentrated perfume oil. A distinguished prestige creation featuring pure hydrodistilled oud, amber resin, and velvety cashmere musk in a heavy octagonal crystal flacon.',
     longDescription:
       'True to its prestige pedigree, Signature 20ml is bottled in an opulent heavy octagonal crystal flacon crowned with a sculpted silver dome. Free from alcohol and synthetic extenders, this pure concentrated attar oil projects an aura of commanding confidence. Blends sparkling saffron and warm cardamoms with an enduring heart of aged agarwood oud, creamy Mysore sandalwood, and warm golden amber. Available exclusively in this signature 20ml luxury crystal edition.',
-    image: '/assets/aistudio/nida_signature_16x9_194713bb.jpg',
+    image: '/images/nida_signature_16x9.jpg',
     sizes: [
       { ml: 20, label: '20ml Luxury Crystal Decanter', price: 200, inStock: true },
     ],
@@ -2367,7 +2367,7 @@ export const PRODUCTS: Product[] = [
       'Amir 9ml pure non-alcoholic concentrated perfume oil. An imperial fragrance inspired by royalty, blending royal saffron, exotic woods, and warm velvety amber in a luxury turquoise presentation box.',
     longDescription:
       'Presented in a breathtaking turquoise and sapphire-blue geometric arabesque presentation box with an opulent sapphire-to-turquoise gradient glass decanter topped with an onion-dome golden crown, Amir is a pure non-alcoholic masterpiece. Formulated in a 9ml luxury flacon, it projects an aura of imperial royalty. It combines luminous royal saffron and crisp bergamot with an enduring heart of Taif rose and precious woods, grounded on golden amber and creamy sandalwood.',
-    image: '/assets/aistudio/amir_16x9_60e58e06.jpg',
+    image: '/images/amir_16x9.jpg',
     sizes: [
       { ml: 9, label: '9ml Royal Decanter Flacon', price: 200, inStock: true },
     ],
