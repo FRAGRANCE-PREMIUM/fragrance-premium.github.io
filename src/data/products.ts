@@ -339,7 +339,7 @@ export const PRODUCTS: Product[] = [
       'Ruh Gulab 3ml alcohol-free concentrated roll-on by Globe Brand. A breathtaking, authentic essence of fresh blooming Damask roses and soothing floral nectar.',
     longDescription:
       'Ruh Gulab is the crowning jewel of classical Indian ittar. Hydrodistilled from thousands of fresh rose petals without alcohol or chemicals. Presented in a 12-piece master display box with individual 3ml cartons. Exceptional longevity and pure spiritual serenity.',
-    image: image: '/images/Ruh_Gulab_Romantic_Rose_Display.png',
+    image: '/images/Ruh_Gulab_Romantic_Rose_Display.png',
     sizes: [
       { ml: 3, label: '3ml Single Flacon (₹40)', price: 40, inStock: true },
       { ml: 36, label: 'Complete 12 Pcs Box Pack (₹40 × 12)', price: 480, inStock: true },
