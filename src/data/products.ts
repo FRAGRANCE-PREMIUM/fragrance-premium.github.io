@@ -579,7 +579,7 @@ export const PRODUCTS: Product[] = [
       'Royale Propaicy 3ml luxury concentrated perfume oil. An aristocratic formulation of golden ambergris, noble woods, and warm aromatic spices.',
     longDescription:
       'Royale Propaicy is crafted for discerning connoisseurs who seek a rich, sophisticated ambery presence. Housed in a pristine white and gold 12-piece presentation box with individual 3ml cartons. 100% non-alcoholic roll-on with stainless-steel roller.',
-    image: 'public/assets/aistudio/Royale_Propaicy_Product_ Still_Life.png',
+    image: '/assets/aistudio/Royale_Propaicy_Product_Still_Life.png',
     sizes: [
       { ml: 3, label: '3ml Single Flacon (₹40)', price: 40, inStock: true },
       { ml: 36, label: 'Complete 12 Pcs Box Pack (₹40 × 12)', price: 480, inStock: true },
