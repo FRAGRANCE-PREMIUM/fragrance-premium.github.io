@@ -62,7 +62,7 @@ export const OrderDetailsPage: React.FC<OrderDetailsPageProps> = ({
     address: '',
     city: 'Chinsurah',
     state: 'West Bengal',
-    pinCode: '712101',
+    pinCode: '712104',
     orderNotes: '',
   });
 
@@ -343,10 +343,10 @@ export const OrderDetailsPage: React.FC<OrderDetailsPageProps> = ({
                       FRAGRANCE PREMIUM Atelier (Main Hub)
                     </h2>
                     <p className="text-xs sm:text-sm font-semibold text-[#7A664F] mt-0.5">
-                      WCP3+C4P Chinsurah, Hooghly District, West Bengal 712101
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1264.5127116917026!2d88.40215036446861!3d22.935890850236888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f8950068c147c3%3A0xe6a4d067c1ab759!2sFRAGRANCE%20PREMIUM!5e1!3m2!1sen!2sin!4v1795101401316!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </p>
                     <p className="text-[11px] text-[#7A664F]/90 mt-0.5">
-                      Landmark: Near Hooghly Railway Station &amp; GT Road Crossing
+                      Landmark: Near Med Plus Diagnostics Centre 
                     </p>
                   </div>
                 </div>
@@ -466,14 +466,14 @@ export const OrderDetailsPage: React.FC<OrderDetailsPageProps> = ({
                         ★ CHINSURAH ATELIER
                       </text>
                       <text x="0" y="-13" fill="#FFFFFF" fontSize="8" textAnchor="middle">
-                        WCP3+C4P Chinsurah, WB
+                        WCP3+C4V Sahaganj , Hooghly
                       </text>
                     </g>
                   </svg>
 
                   {/* Corner Map Badges */}
                   <div className="absolute top-2 left-2 px-2 py-0.5 rounded bg-white/90 backdrop-blur-xs border border-[#D5CEBF] text-[9px] font-bold text-[#143628]">
-                    📍 Map Center: Chinsurah, Hooghly
+                    📍 Map Center: Sahaganj , Hooghly
                   </div>
                 </div>
 
