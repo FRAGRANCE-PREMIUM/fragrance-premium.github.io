@@ -416,7 +416,7 @@ export const OrderDetailsPage: React.FC<OrderDetailsPageProps> = ({
                 <div className="relative w-full h-[220px] sm:h-[240px] rounded-xl overflow-hidden border border-[#D5CEBF] bg-[#E8EDE6] shadow-xs">
                   {/* Map Grid and River SVG Illustration */}
                   <iframe
-  src="https://maps.app.goo.gl/5gdnpRwSd84ck4Ew8"
+  src="https://maps.google.com/maps?q=Wazid+Nagar+Sahaganj+Hooghly+West+Bengal+712104&z=15&output=embed"
   className="w-full h-full border-0"
   allowFullScreen
   referrerPolicy="no-referrer-when-downgrade"

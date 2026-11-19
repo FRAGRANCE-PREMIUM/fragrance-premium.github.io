@@ -18,7 +18,7 @@ export const STORE_LOCATION = {
   lng: 88.40280106369894,
   freeRadiusKm: 2.0,
   ratePer500m: 10,
-  googleMapsUrl: 'https://maps.app.goo.gl/5gdnpRwSd84ck4Ew8',
+  googleMapsUrl: 'src="https://maps.google.com/maps?q=Wazid+Nagar+Sahaganj+Hooghly+West+Bengal+712104&z=15&output=embed"',
 };
 
 /**
