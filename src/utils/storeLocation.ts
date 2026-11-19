@@ -12,13 +12,13 @@
 
 export const STORE_LOCATION = {
   name: 'FRAGRANCE PREMIUM Atelier',
-  plusCode: 'WCP3+C4P Chinsurah, West Bengal',
-  address: 'WCP3+C4P, Chinsurah, Hooghly District, West Bengal 712101, India',
-  lat: 22.9038,
-  lng: 88.3970,
+  plusCode: 'WCP3+C4V Sahaganj , Hooghly',
+  address: 'WCP3+C4V, Sahaganj, Hooghly District, West Bengal 712104, India',
+  lat: 22.93616550890487, 
+  lng: 88.40280106369894,
   freeRadiusKm: 2.0,
   ratePer500m: 10,
-  googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=WCP3%2BC4P+Chinsurah%2C+West+Bengal',
+  googleMapsUrl: 'https://maps.app.goo.gl/5gdnpRwSd84ck4Ew8',
 };
 
 /**

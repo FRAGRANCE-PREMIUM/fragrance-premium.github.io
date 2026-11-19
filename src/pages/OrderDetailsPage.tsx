@@ -343,8 +343,8 @@ export const OrderDetailsPage: React.FC<OrderDetailsPageProps> = ({
                       FRAGRANCE PREMIUM Atelier (Main Hub)
                     </h2>
                     <p className="text-xs sm:text-sm font-semibold text-[#7A664F] mt-0.5">
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1264.5127116917026!2d88.40215036446861!3d22.935890850236888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f8950068c147c3%3A0xe6a4d067c1ab759!2sFRAGRANCE%20PREMIUM!5e1!3m2!1sen!2sin!4v1795101401316!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                    </p>
+  Wazid Nagar, Sahaganj, Hooghly , West Bengal 712104
+</p>
                     <p className="text-[11px] text-[#7A664F]/90 mt-0.5">
                       Landmark: Near Med Plus Diagnostics Centre 
                     </p>
@@ -415,61 +415,13 @@ export const OrderDetailsPage: React.FC<OrderDetailsPageProps> = ({
                 {/* Visual Cartographic Map Canvas */}
                 <div className="relative w-full h-[220px] sm:h-[240px] rounded-xl overflow-hidden border border-[#D5CEBF] bg-[#E8EDE6] shadow-xs">
                   {/* Map Grid and River SVG Illustration */}
-                  <svg className="w-full h-full" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    {/* Background terrain */}
-                    <rect width="400" height="240" fill="#EBF0E6" />
-                    
-                    {/* River Hooghly winding through eastern side */}
-                    <path
-                      d="M320 0 C310 60, 340 120, 310 180 C290 220, 330 240, 320 240 L400 240 L400 0 Z"
-                      fill="#BEE3F8"
-                      stroke="#90CDF4"
-                      strokeWidth="2"
-                    />
-                    <text x="345" y="110" fill="#2B6CB0" fontSize="10" fontWeight="bold" transform="rotate(75 345,110)">
-                      Hooghly River
-                    </text>
-
-                    {/* Major Roads (GT Road & State Highways) */}
-                    <path d="M0 60 Q150 70 400 50" stroke="#CBD5E0" strokeWidth="8" />
-                    <path d="M0 60 Q150 70 400 50" stroke="#FFFFFF" strokeWidth="6" />
-
-                    <path d="M120 0 Q140 120 110 240" stroke="#F6E05E" strokeWidth="7" />
-                    <path d="M120 0 Q140 120 110 240" stroke="#FAF089" strokeWidth="4" />
-                    <text x="75" y="140" fill="#744210" fontSize="9" fontWeight="bold" transform="rotate(78 75,140)">
-                      Grand Trunk Road
-                    </text>
-
-                    {/* Secondary roads */}
-                    <path d="M60 120 L300 130" stroke="#FFFFFF" strokeWidth="4" />
-                    <path d="M180 30 L220 240" stroke="#FFFFFF" strokeWidth="4" />
-
-                    {/* Concentric 2 KM Free Delivery Zone Circle */}
-                    <circle cx="180" cy="120" r="75" fill="#48BB78" fillOpacity="0.12" stroke="#38A169" strokeWidth="1.5" strokeDasharray="4 3" />
-                    <circle cx="180" cy="120" r="130" fill="#ECC94B" fillOpacity="0.08" stroke="#D69E2E" strokeWidth="1" strokeDasharray="3 3" />
-
-                    {/* Free delivery label */}
-                    <rect x="120" y="52" width="120" height="18" rx="9" fill="#143628" />
-                    <text x="180" y="65" fill="#FFFFFF" fontSize="9" fontWeight="bold" textAnchor="middle">
-                      FREE 2.0 KM ZONE (₹0)
-                    </text>
-
-                    {/* Chinsurah Store Location Pin (Pulsing marker) */}
-                    <circle cx="180" cy="120" r="16" fill="#C5A86A" fillOpacity="0.3" className="animate-ping" />
-                    <circle cx="180" cy="120" r="9" fill="#143628" stroke="#C5A86A" strokeWidth="2.5" />
-                    <circle cx="180" cy="120" r="3.5" fill="#FFFFFF" />
-
-                    {/* Atelier Location Pin Label Card */}
-                    <g transform="translate(180, 115)">
-                      <rect x="-70" y="-36" width="140" height="26" rx="6" fill="#143628" stroke="#C5A86A" strokeWidth="1.5" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.2))" />
-                      <text x="0" y="-23" fill="#C5A86A" fontSize="9" fontWeight="bold" textAnchor="middle">
-                        ★ CHINSURAH ATELIER
-                      </text>
-                      <text x="0" y="-13" fill="#FFFFFF" fontSize="8" textAnchor="middle">
-                        WCP3+C4V Sahaganj , Hooghly
-                      </text>
-                    </g>
-                  </svg>
+                  <iframe
+  src="https://maps.app.goo.gl/5gdnpRwSd84ck4Ew8"
+  className="w-full h-full border-0"
+  allowFullScreen
+  referrerPolicy="no-referrer-when-downgrade"
+  title="FRAGRANCE PREMIUM Location"
+/>
 
                   {/* Corner Map Badges */}
                   <div className="absolute top-2 left-2 px-2 py-0.5 rounded bg-white/90 backdrop-blur-xs border border-[#D5CEBF] text-[9px] font-bold text-[#143628]">
