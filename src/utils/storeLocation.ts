@@ -21,6 +21,41 @@ export const STORE_LOCATION = {
   googleMapsUrl: 'src="https://maps.google.com/maps?q=Wazid+Nagar+Sahaganj+Hooghly+West+Bengal+712104&z=15&output=embed"',
 };
 
+/**
+ * Calculates straight-line distance in kilometers using the Haversine formula
+ */
+export function calculateDistanceKm(
+  lat1: number,
+  lon1: number,
+  lat2: number = STORE_LOCATION.lat,
+  lon2: number = STORE_LOCATION.lng
+): number {
+  const R = 6371; // Earth's radius in km
+  const dLat = ((lat2 - lat1) * Math.PI) / 180;
+  const dLon = ((lon2 - lon1) * Math.PI) / 180;
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos((lat1 * Math.PI) / 180) *
+      Math.cos((lat2 * Math.PI) / 180) *
+      Math.sin(dLon / 2) *
+      Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  const dist = R * c;
+  return parseFloat(dist.toFixed(1));
+}
+
+export interface DeliveryCalculation {
+  distanceKm: number;
+  deliveryFee: number;
+  isFree: boolean;
+  ruleExplanation: string;
+}
+
+/**
+ * Calculates the exact delivery fee based on customer distance:
+ * - <= 2.0 km: FREE (₹0)
+ * - > 2.0 km: ₹10 per 500 meters beyond 2 km
+ */
 export const calculateDeliveryCharge = (distanceKm: number) => {
   const FREE_RADIUS_KM = 2;
   const RATE_PER_500M = 10;
