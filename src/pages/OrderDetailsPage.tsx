@@ -425,7 +425,6 @@ export const OrderDetailsPage: React.FC<OrderDetailsPageProps> = ({
 
                   {/* Corner Map Badges */}
                   <div className="absolute top-2 left-2 px-2 py-0.5 rounded bg-white/90 backdrop-blur-xs border border-[#D5CEBF] text-[9px] font-bold text-[#143628]">
-                    📍 Map Center: Sahaganj , Hooghly
                   </div>
                 </div>
 
