@@ -376,7 +376,7 @@ export const OrderDetailsPage: React.FC<OrderDetailsPageProps> = ({
                     </span>
                     <div>
                       <span className="block text-[11px] font-bold uppercase text-amber-900">Beyond 2.0 KM</span>
-                      <strong className="text-[#92400E] text-sm">₹10 per 500 Meters</strong>
+                      <strong className="text-[#92400E] text-sm">₹10 per 500 Meters ( Max ₹100 ) </strong>
                     </div>
                   </div>
                 </div>

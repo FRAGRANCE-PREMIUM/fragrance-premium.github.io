@@ -21,59 +21,30 @@ export const STORE_LOCATION = {
   googleMapsUrl: 'src="https://maps.google.com/maps?q=Wazid+Nagar+Sahaganj+Hooghly+West+Bengal+712104&z=15&output=embed"',
 };
 
-/**
- * Calculates straight-line distance in kilometers using the Haversine formula
- */
-export function calculateDistanceKm(
-  lat1: number,
-  lon1: number,
-  lat2: number = STORE_LOCATION.lat,
-  lon2: number = STORE_LOCATION.lng
-): number {
-  const R = 6371; // Earth's radius in km
-  const dLat = ((lat2 - lat1) * Math.PI) / 180;
-  const dLon = ((lon2 - lon1) * Math.PI) / 180;
-  const a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos((lat1 * Math.PI) / 180) *
-      Math.cos((lat2 * Math.PI) / 180) *
-      Math.sin(dLon / 2) *
-      Math.sin(dLon / 2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  const dist = R * c;
-  return parseFloat(dist.toFixed(1));
-}
+export const calculateDeliveryCharge = (distanceKm: number) => {
+  const FREE_RADIUS_KM = 2;
+  const RATE_PER_500M = 10;
+  const MAX_FEE = 100;
 
-export interface DeliveryCalculation {
-  distanceKm: number;
-  deliveryFee: number;
-  isFree: boolean;
-  ruleExplanation: string;
-}
-
-/**
- * Calculates the exact delivery fee based on customer distance:
- * - <= 2.0 km: FREE (₹0)
- * - > 2.0 km: ₹10 per 500 meters beyond 2 km
- */
-export function calculateDeliveryCharge(distanceKm: number): DeliveryCalculation {
-  if (distanceKm <= STORE_LOCATION.freeRadiusKm) {
+  if (distanceKm <= FREE_RADIUS_KM) {
     return {
-      distanceKm,
       deliveryFee: 0,
       isFree: true,
-      ruleExplanation: `Within 2.0 km radius from Chinsurah Store: FREE Delivery (₹0)`,
+      ruleExplanation: 'Free delivery within 2 km of our store.',
     };
   }
 
-  const excessKm = distanceKm - STORE_LOCATION.freeRadiusKm;
-  const blocksOf500m = Math.ceil((excessKm * 1000) / 500);
-  const deliveryFee = blocksOf500m * STORE_LOCATION.ratePer500m;
+  const extraKm = distanceKm - FREE_RADIUS_KM;
+  const blocksOf500m = Math.ceil(extraKm / 0.5);
+  const rawFee = blocksOf500m * RATE_PER_500M;
+  const deliveryFee = Math.min(rawFee, MAX_FEE);
 
   return {
-    distanceKm,
     deliveryFee,
     isFree: false,
-    ruleExplanation: `${distanceKm} km from store (${excessKm.toFixed(1)} km beyond 2 km free radius · ₹10 per 500m = ₹${deliveryFee})`,
+    ruleExplanation:
+      rawFee > MAX_FEE
+        ? 'First 2 km free, then ₹10 per 500 m. Delivery charge is capped at ₹100.'
+        : 'First 2 km free, then ₹10 per 500 m.',
   };
-}
+};
