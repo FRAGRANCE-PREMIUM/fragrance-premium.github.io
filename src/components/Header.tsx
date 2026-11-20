@@ -62,17 +62,6 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Store Orders Vault Direct Access & Code Downloads */}
           <div className="flex items-center gap-2 flex-wrap justify-center">
-            {openDownloadModal && (
-              <button
-                onClick={openDownloadModal}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C5A86A] text-[#0F281D] hover:bg-white text-[10px] sm:text-[11px] font-extrabold tracking-wider cursor-pointer shadow-sm active:scale-95 transition-all flex-shrink-0"
-                title="Download Individual Main Files (.tsx, .ts, .json, .html)"
-              >
-                <Download className="w-3.5 h-3.5 text-[#0F281D]" />
-                <span>DOWNLOAD MAIN FILES</span>
-              </button>
-            )}
-
             <button
               onClick={() => {
                 setActivePage('orders');
