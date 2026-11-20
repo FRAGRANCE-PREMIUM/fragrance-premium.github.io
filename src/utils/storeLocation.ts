@@ -18,7 +18,7 @@ export const STORE_LOCATION = {
   lng: 88.40280106369894,
   freeRadiusKm: 2.0,
   ratePer500m: 10,
-  googleMapsUrl: 'src="https://maps.google.com/maps?q=22.93611251384632,88.40280770631323"',
+  googleMapsUrl: 'src="https://www.google.com/maps/place/FRAGRANCE+PREMIUM/@22.9360017,88.4026434,61m/data=!3m1!1e3!4m6!3m5!1s0x39f8950068c147c3:0xe6a4d067c1ab759!8m2!3d22.9360909!4d88.4028047!16s%2Fg%2F11p2xt2lp_?entry=ttu&g_ep=EgoyMDI2MTExNy4wIKXMDSoASAFQAw%3D%3D"',
 };
 
 /**
