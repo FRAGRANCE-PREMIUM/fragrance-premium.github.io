@@ -18,7 +18,7 @@ export const STORE_LOCATION = {
   lng: 88.40280106369894,
   freeRadiusKm: 2.0,
   ratePer500m: 10,
-  googleMapsUrl: 'src="https://maps.app.goo.gl/ZJcCrhc6W77vfKNL7"',
+  googleMapsUrl: 'src="https://maps.google.com/maps?q=22.93611251384632,88.40280770631323"',
 };
 
 /**
