@@ -50,36 +50,6 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <>
-      {/* 1. Slim Forest Green & Ivory Announcement Bar with Prominent Store Orders Vault Button */}
-      <aside aria-label="Announcement" className="bg-[#0F281D] border-t-2 border-[#C5A86A] border-b border-[#C5A86A]/40 text-[#FAF7F0] text-[11px] sm:text-xs py-2 px-4 tracking-wider font-semibold shadow-xs z-50 relative">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
-          <div className="flex items-center justify-center gap-2 flex-wrap">
-            <Sparkles className="w-3.5 h-3.5 text-[#C5A86A] flex-shrink-0" />
-            <span className="leading-tight text-[#FAF7F0]/95">
-              100% Pure Non-Alcoholic Artisanal Attars · Lowest Price 3ml Flacons from {BRAND_CONFIG.currencySymbol}40 · Free Express Delivery Over {BRAND_CONFIG.currencySymbol}{BRAND_CONFIG.freeShippingThreshold}
-            </span>
-          </div>
-
-          {/* Store Orders Vault Direct Access & Code Downloads */}
-          <div className="flex items-center gap-2 flex-wrap justify-center">
-            <button
-              onClick={() => {
-                setActivePage('orders');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#143628] text-[#FAF7F0] hover:bg-[#1F4D3B] hover:text-white border border-[#C5A86A] text-[10px] sm:text-[11px] font-bold tracking-wider cursor-pointer shadow-sm whitespace-nowrap active:scale-95 transition-all flex-shrink-0"
-              title="Administrator Protected Orders Vault"
-            >
-              <Shield className="w-3.5 h-3.5 text-[#C5A86A]" />
-              <span className="text-[#C5A86A]">STORE ORDERS VAULT</span>
-              <span className="text-[9px] bg-[#C5A86A] text-[#0F281D] px-1.5 py-0.2 rounded-full font-extrabold ml-0.5">
-                {orders.length}
-              </span>
-            </button>
-          </div>
-        </div>
-      </aside>
-
       {/* 2. Premium Royal Header with Ivory & Forest Green Palette */}
       <header className="sticky top-0 z-40 bg-[#FAF7F0]/95 backdrop-blur-md border-b border-[#D5CEBF] text-[#182920] transition-all duration-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[96px] sm:min-h-[112px] py-2 sm:py-3 flex items-center justify-between gap-3 sm:gap-6">
