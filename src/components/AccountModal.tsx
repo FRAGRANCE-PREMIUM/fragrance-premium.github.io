@@ -121,18 +121,6 @@ export const AccountModal: React.FC<AccountModalProps> = ({ isOpen, onClose, set
           </form>
 
           {/* Store Orders Manager Link */}
-          <div className="pt-2 border-t border-[#DED1BE] flex items-center justify-between">
-            <button
-              onClick={() => {
-                onClose();
-                setActivePage('orders');
-              }}
-              className="text-xs font-medium text-[#591D2B] hover:text-[#713142] flex items-center gap-1.5 underline decoration-[#DED1BE]"
-            >
-              <ClipboardList className="w-4 h-4 text-[#591D2B]" />
-              <span>Open Store Orders Management Console</span>
-            </button>
-          </div>
         </div>
       </div>
     </div>

@@ -61,59 +61,8 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     try {
       const stored = localStorage.getItem(ORDERS_STORAGE_KEY);
       if (stored) return JSON.parse(stored);
-      // Default demo order so store owner immediately sees how the manager looks
-      return [
-        {
-          orderId: 'FP-2026-9021',
-          createdAt: new Date().toLocaleDateString('en-IN', {
-            month: 'short',
-            day: 'numeric',
-            year: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-          }),
-          items: [
-            {
-              id: 'freshia-9.9-Pure Attar Oil',
-              productId: 'freshia',
-              name: 'Freshia',
-              image: '/assets/aistudio/freshia_al_nuaim_1a957173.webp',
-              category: 'Fresh',
-              ml: 9.9,
-              variant: 'Pure Attar Oil',
-              unitPrice: 200,
-              quantity: 1,
-            },
-            {
-              id: 'hajre-aswad-6-Pure Attar Oil',
-              productId: 'hajre-aswad',
-              name: 'Hajre Aswad',
-              image: '/images/al_nuaim_hajre_aswad.jpeg',
-              category: 'Amber',
-              ml: 6,
-              variant: 'Pure Attar Oil',
-              unitPrice: 140,
-              quantity: 1,
-            },
-          ],
-          customer: {
-            fullName: 'Zameer Akhtar',
-            phone: '9876543210',
-            email: 'zameer@example.com',
-            address: '402, Royal Boulevard, Jubilee Hills',
-            city: 'Hyderabad',
-            state: 'Telangana',
-            pinCode: '500033',
-            orderNotes: 'Call before delivery please',
-          },
-          paymentMethod: 'upi',
-          subtotal: 340,
-          shippingFee: 0,
-          grandTotal: 340,
-          status: 'Received',
-        },
-      ];
-    } catch {
+            return [];}
+             catch {
       return [];
     }
   });
