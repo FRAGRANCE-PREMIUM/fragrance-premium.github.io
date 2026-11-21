@@ -34,8 +34,7 @@ export const Header: React.FC<HeaderProps> = ({
     { label: 'ORDER DETAILS', type: 'page', page: 'order-details' as ActivePage },
     { label: 'PRICE RACKS', type: 'collection', filter: 'All' },
     { label: 'BRANDS', type: 'page', page: 'brands' as ActivePage },
-    { label: 'ORDERS VAULT', type: 'page', page: 'orders' as ActivePage },
-  ];
+      ];
 
   const handleNavClick = (item: typeof navItems[0]) => {
     if (item.type === 'page' && item.page) {
@@ -88,7 +87,7 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
           </button>
 
-          {/* Zone 2: Navigation Menu - Uppercase with Premium Micro-Interactions */}
+        
           {/* For ultra-wide screens (xl: 1280px+), show all 7 tabs */}
           <nav className="hidden xl:flex items-center gap-3 2xl:gap-5 text-xs font-bold tracking-[0.11em] text-[#182920] flex-shrink-0">
             {navItems.map((item, index) => {
@@ -131,41 +130,7 @@ export const Header: React.FC<HeaderProps> = ({
             })}
           </nav>
 
-          {/* Zone 3: Actions (Store Orders Vault, Search, Account, Wishlist, Cart) */}
-          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-            {/* Highly Prominent Store Orders Vault Button */}
-            <button
-              onClick={() => {
-                setActivePage('orders');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className={`px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl text-xs font-extrabold uppercase tracking-wider flex items-center gap-2 transition-all duration-300 shadow-sm cursor-pointer border ${
-                activePage === 'orders'
-                  ? 'bg-[#143628] text-white border-[#C5A86A] ring-2 ring-[#C5A86A]/40 shadow-md scale-105'
-                  : 'bg-[#143628] hover:bg-[#1F4D3B] text-[#FAF7F0] border-[#C5A86A] hover:shadow-md'
-              }`}
-              title="Store Orders Vault (Protected Administrator Portal)"
-              aria-label="Open Store Orders Vault"
-            >
-              <div className="w-5 h-5 rounded-md bg-[#C5A86A] text-[#0F281D] flex items-center justify-center flex-shrink-0 shadow-2xs">
-                <Shield className="w-3.5 h-3.5" />
-              </div>
-              <span className="font-extrabold text-[11px] sm:text-xs tracking-wider whitespace-nowrap text-[#FAF7F0]">
-                ORDERS VAULT
-              </span>
-              {orders.length > 0 ? (
-                <span className="text-[10px] px-1.5 py-0.5 rounded-full font-extrabold bg-[#C5A86A] text-[#0F281D] shadow-xs">
-                  {orders.length}
-                </span>
-              ) : (
-                <span className="text-[9px] px-1.5 py-0.5 rounded-full font-bold bg-white/20 text-white/90">
-                  🔒
-                </span>
-              )}
-            </button>
-
-
-
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">           
             {/* Search Icon */}
             <button
               onClick={openSearch}
@@ -255,22 +220,7 @@ export const Header: React.FC<HeaderProps> = ({
               </button>
             ))}
 
-            <button
-              onClick={() => {
-                setActivePage('orders');
-                setMobileMenuOpen(false);
-              }}
-              className="block w-full text-left py-2.5 text-xs font-bold uppercase tracking-wider text-[#143628] transition-colors flex items-center justify-between cursor-pointer border-b border-[#D5CEBF]/60"
-            >
-              <span>STORE ORDERS DASHBOARD</span>
-              <span className="text-xs px-2.5 py-0.5 rounded-full bg-[#143628] text-[#FAF7F0] font-bold">
-                {orders.length}
-              </span>
-            </button>
-
-
-
-            <div className="pt-3">
+                <div className="pt-3">
               <button
                 onClick={() => {
                   onSelectNavCategory('All');
