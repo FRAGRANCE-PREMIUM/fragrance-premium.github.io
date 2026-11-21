@@ -807,29 +807,7 @@ export const OrdersDashboardPage: React.FC<OrdersDashboardPageProps> = ({ setAct
                     {/* Forward to Gmail and Action Controls */}
                     <div className="pt-3 border-t border-[#D5CEBF]/60 flex flex-wrap items-center justify-between gap-3">
                       <div className="flex items-center gap-2 flex-wrap">
-                        <a
-                          href={`mailto:nskproject01@gmail.com?subject=${encodeURIComponent(
-                            `[STORE VAULT] Order #${order.orderId} - Rs ${order.grandTotal} - ${order.customer.fullName}`
-                          )}&body=${encodeURIComponent(
-                            `STORE ORDER VAULT RECORD #${order.orderId}\n` +
-                              `Customer: ${order.customer.fullName}\n` +
-                              `Phone: +91 ${order.customer.phone} (Verified: ${order.customer.phoneVerified ? 'YES' : 'NO'})\n` +
-                              `Address: ${order.customer.address}, ${order.customer.city}, ${order.customer.state} - PIN: ${order.customer.pinCode}\n` +
-                              `Store Distance: ${order.distanceKm} km\n` +
-                              `Grand Total: Rs ${order.grandTotal} (COD)\n` +
-                              `Current Status: ${order.status}\n\n` +
-                              `Items:\n` +
-                              order.items
-                                .map((it) => `- ${it.name} (${it.ml === 100 ? '20 Pcs Box' : it.ml === 36 ? '12 Pcs Box' : it.ml === 18 ? '6 Pcs Box' : it.ml === 25 ? '10 Pcs Box' : `${it.ml}ml`}) x ${it.quantity} = Rs ${it.unitPrice * it.quantity}`)
-                                .join('\n')
-                          )}`}
-                          className="px-3.5 py-1.5 rounded-xl bg-[#143628] hover:bg-[#1F4D3B] text-white text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5 transition-colors shadow-xs"
-                        >
-                          <Mail className="w-3.5 h-3.5 text-[#C5A86A]" />
-                          <span>Forward to nskproject01@gmail.com</span>
-                        </a>
-
-                        <button
+                             <button
                           type="button"
                           onClick={() => {
                             const payload = {
