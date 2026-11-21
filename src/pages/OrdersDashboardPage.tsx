@@ -169,7 +169,247 @@ export const OrdersDashboardPage: React.FC<OrdersDashboardPageProps> = ({ setAct
     link.click();
     document.body.removeChild(link);
   };
-        {/* Metrics Row (Compact & Clean) */}
+
+  // If Not Authenticated: Render High-Security Gate in Ivory & Forest Green
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-[75vh] flex items-center justify-center px-4 py-12 bg-transparent">
+        <div className="w-full max-w-md bg-white border-2 border-[#C5A86A] rounded-3xl p-6 sm:p-8 shadow-2xl text-[#182920] relative overflow-hidden space-y-6">
+          <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#143628] via-[#C5A86A] to-[#143628]" />
+
+          {/* Header */}
+          <div className="text-center space-y-2">
+            <div className="w-14 h-14 mx-auto rounded-2xl bg-[#143628] text-[#C5A86A] flex items-center justify-center shadow-md border border-[#C5A86A]">
+              <Shield className="w-7 h-7" />
+            </div>
+            <span className="text-[10px] font-bold tracking-[0.25em] text-[#7A664F] uppercase block">
+              Store Owner Portal
+            </span>
+            <h2 className="font-serif text-2xl font-bold text-[#143628]">
+              Store Orders Vault
+            </h2>
+            <p className="text-xs text-[#182920]/75 leading-relaxed">
+              Confidential administrator dashboard for customer orders. Authorized Gmail verification required.
+            </p>
+          </div>
+
+          {/* STEP 1: GMAIL VERIFICATION */}
+          <form onSubmit={handleVerifyEmail} className="space-y-4">
+            <div>
+              <label className="block text-xs font-bold uppercase tracking-wider text-[#143628] mb-1.5">
+                Step 1: Administrator Gmail Verification
+              </label>
+              <div className="relative">
+                <input
+                  type="email"
+                  value={emailInput}
+                  disabled={isEmailVerified}
+                  onChange={(e) => {
+                    setEmailInput(e.target.value);
+                    if (emailError) setEmailError('');
+                  }}
+                  placeholder="Enter administrator Gmail..."
+                  className={`w-full px-4 py-3 rounded-xl border text-xs sm:text-sm font-medium focus:outline-none transition-all ${
+                    isEmailVerified
+                      ? 'bg-[#ECFDF5] border-[#10B981] text-[#065F46]'
+                      : emailError
+                      ? 'bg-[#FEF2F2] border-[#EF4444] text-[#991B1B]'
+                      : 'bg-[#FAF7F0] border-[#D5CEBF] text-[#182920] focus:border-[#143628]'
+                  }`}
+                  required
+                />
+                {isEmailVerified && (
+                  <CheckCircle2 className="w-5 h-5 text-[#10B981] absolute right-3.5 top-1/2 -translate-y-1/2" />
+                )}
+              </div>
+            </div>
+
+            {emailError && (
+              <div className="p-3 rounded-xl bg-[#FEF2F2] border border-[#FCA5A5] text-[#991B1B] text-xs flex items-start gap-2.5 animate-in fade-in duration-200">
+                <AlertTriangle className="w-4 h-4 flex-shrink-0 text-[#DC2626] mt-0.5" />
+                <span>{emailError}</span>
+              </div>
+            )}
+
+            {!isEmailVerified && (
+              <button
+                type="submit"
+                className="w-full py-3 rounded-xl bg-[#143628] hover:bg-[#1F4D3B] text-[#FAF7F0] font-bold text-xs tracking-wider uppercase transition-all duration-200 shadow-md cursor-pointer flex items-center justify-center gap-2"
+              >
+                <Shield className="w-4 h-4 text-[#C5A86A]" />
+                <span>Verify Admin Gmail</span>
+              </button>
+            )}
+          </form>
+
+          {/* STEP 2: PASSWORD ENTRY */}
+          {isEmailVerified ? (
+            <form onSubmit={handleVerifyPassword} className="space-y-4 pt-2 border-t border-[#D5CEBF]/60 animate-in fade-in duration-300">
+              <div className="p-2.5 rounded-xl bg-[#ECFDF5] border border-[#10B981]/40 flex items-center gap-2 text-xs text-[#065F46]">
+                <CheckCircle2 className="w-4 h-4 text-[#10B981] flex-shrink-0" />
+                <span>Verified Admin: <strong>{authenticatedEmail}</strong></span>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider text-[#143628] mb-1.5">
+                  Step 2: Security Master Passcode
+                </label>
+                <div className="relative">
+                  <input
+                    type={showPassword ? 'text' : 'password'}
+                    value={passwordInput}
+                    onChange={(e) => {
+                      setPasswordInput(e.target.value);
+                      if (passwordError) setPasswordError('');
+                    }}
+                    placeholder="Enter security passcode..."
+                    className={`w-full pl-4 pr-11 py-3 rounded-xl border text-xs sm:text-sm font-medium focus:outline-none transition-all ${
+                      passwordError
+                        ? 'bg-[#FEF2F2] border-[#EF4444] text-[#991B1B]'
+                        : 'bg-[#FAF7F0] border-[#D5CEBF] text-[#182920] focus:border-[#143628]'
+                    }`}
+                    required
+                    autoFocus
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#7A664F] hover:text-[#143628] cursor-pointer"
+                  >
+                    {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4 text-[#7A664F]" />}
+                  </button>
+                </div>
+              </div>
+
+              {passwordError && (
+                <div className="p-3 rounded-xl bg-[#FEF2F2] border border-[#FCA5A5] text-[#991B1B] text-xs flex items-start gap-2.5 animate-in fade-in duration-200">
+                  <AlertTriangle className="w-4 h-4 flex-shrink-0 text-[#DC2626] mt-0.5" />
+                  <span>{passwordError}</span>
+                </div>
+              )}
+
+              <button
+                type="submit"
+                className="w-full py-3 rounded-xl bg-[#143628] hover:bg-[#1F4D3B] text-[#FAF7F0] font-bold text-xs tracking-wider uppercase transition-all duration-200 shadow-md cursor-pointer flex items-center justify-center gap-2"
+              >
+                <KeyRound className="w-4 h-4 text-[#C5A86A]" />
+                <span>Unlock Orders Vault</span>
+              </button>
+            </form>
+          ) : (
+            <div className="p-3 rounded-xl bg-[#FAF7F0] border border-[#D5CEBF] text-center text-xs text-[#7A664F]">
+              <Lock className="w-4 h-4 mx-auto mb-1 text-[#7A664F]" />
+              <span>Passcode entry will unlock once authorized Gmail is validated.</span>
+            </div>
+          )}
+
+          <div className="pt-2 text-center">
+            <button
+              type="button"
+              onClick={() => setActivePage('home')}
+              className="text-xs text-[#7A664F] hover:text-[#143628] underline font-medium cursor-pointer"
+            >
+              ← Return to Boutique Home
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6 bg-transparent text-[#182920]">
+      
+      {/* Top Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#D5CEBF] pb-5">
+        <div>
+          <button
+            onClick={() => setActivePage('home')}
+            className="inline-flex items-center gap-1.5 text-xs text-[#7A664F] hover:text-[#143628] transition-colors mb-2 cursor-pointer font-semibold"
+          >
+            <ArrowLeft className="w-3.5 h-3.5 text-[#C5A86A]" />
+            <span>Return to Boutique</span>
+          </button>
+          <div className="flex items-center gap-3">
+            <h1 className="font-serif text-2xl sm:text-3xl text-[#143628] font-bold">
+              Store Orders Vault
+            </h1>
+            <span className="text-xs bg-[#143628] text-[#FAF7F0] px-3 py-1 rounded-full font-bold">
+              {orders.length} {orders.length === 1 ? 'Order' : 'Orders'}
+            </span>
+          </div>
+          <p className="text-xs sm:text-sm text-[#182920]/75 mt-1">
+            Compact executive ledger. Click any order row to inspect full customer specifications and flacons.
+          </p>
+        </div>
+
+        <div className="flex items-center gap-2 flex-wrap">
+          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-[#C5A86A] text-xs font-semibold text-[#143628] shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
+            <span className="text-[11px] font-bold uppercase tracking-wider">{authenticatedEmail}</span>
+          </div>
+
+          <button
+            onClick={handleSignOut}
+            className="px-3.5 py-2 rounded-xl text-xs font-semibold bg-[#FEF2F2] hover:bg-[#FEE2E2] text-[#991B1B] border border-[#FCA5A5] flex items-center gap-1.5 transition-colors shadow-xs cursor-pointer"
+            title="Lock Orders Vault"
+          >
+            <Lock className="w-3.5 h-3.5 text-[#991B1B]" />
+            <span className="font-bold uppercase tracking-wider text-[11px]">Lock Vault</span>
+          </button>
+
+          {orders.length > 0 && (
+            <button
+              onClick={exportToCSV}
+              className="px-3.5 py-2 rounded-xl text-xs font-semibold bg-white hover:bg-[#FAF7F0] text-[#143628] border border-[#C5A86A] flex items-center gap-1.5 transition-colors shadow-xs cursor-pointer"
+            >
+              <Download className="w-3.5 h-3.5 text-[#C5A86A]" />
+              <span className="font-bold uppercase tracking-wider text-[11px]">Export CSV</span>
+            </button>
+          )}
+
+          <button
+            type="button"
+            onClick={() => {
+              const testId = `VAULT-${Date.now().toString().slice(-4)}`;
+              const ping = {
+                _subject: `🔔 [NEW ACTIVATION FORM #${testId}] Store Orders Vault - Fragrance Premium`,
+                _captcha: 'false',
+                _template: 'table',
+                Store: BRAND_CONFIG.brandName,
+                Time: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+                Notice: 'Please click the green Activate Form button to receive all store orders directly in your Gmail (nskproject01@gmail.com)!',
+                Recipient: 'nskproject01@gmail.com',
+                Verification_Code: testId,
+              };
+
+              fetch('https://formsubmit.co/ajax/nskproject01@gmail.com', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(ping),
+                keepalive: true,
+              }).catch(() => {});
+
+              setShowVaultActivationModal(true);
+            }}
+            className="px-3.5 py-2 rounded-xl text-xs font-semibold bg-[#ECFDF5] hover:bg-[#D1FAE5] text-[#065F46] border border-[#10B981] flex items-center gap-1.5 transition-colors shadow-xs cursor-pointer"
+            title="Send test ping to nskproject01@gmail.com"
+          >
+            <Mail className="w-3.5 h-3.5 text-[#10B981]" />
+            <span className="font-bold uppercase tracking-wider text-[11px]">Send New Form / Ping Gmail</span>
+          </button>
+
+          <a
+            href={`tel:${BRAND_CONFIG.contact.phone}`}
+            className="px-3.5 py-2 rounded-xl text-xs font-semibold bg-[#143628] hover:bg-[#1F4D3B] text-white flex items-center gap-1.5 transition-colors shadow-xs"
+          >
+            <Phone className="w-3.5 h-3.5 text-[#C5A86A]" />
+            <span className="font-bold uppercase tracking-wider text-[11px]">Call {BRAND_CONFIG.contact.phone}</span>
+          </a>
+        </div>
+      </div>
+
+      {/* Metrics Row (Compact & Clean) */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
         <div className="bg-white border border-[#D5CEBF] rounded-2xl p-4 shadow-xs">
           <span className="text-[10px] uppercase tracking-wider text-[#7A664F] font-bold block">
