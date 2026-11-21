@@ -280,6 +280,31 @@ export const OrderDetailsPage: React.FC<OrderDetailsPageProps> = ({
         body: JSON.stringify(emailPayload),
         keepalive: true,
       }).catch((err) => console.log('Mail error:', err));
+      
+      // Save a copy of the order to Google Sheet
+      if (BRAND_CONFIG.orders.sheetWebhookUrl) {
+        fetch(BRAND_CONFIG.orders.sheetWebhookUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            orderId,
+            name: form.fullName.trim(),
+            phone: form.phone.trim(),
+            email: form.email.trim(),
+            address: `${form.address.trim()}, ${form.city.trim()}, ${form.state.trim()} - PIN: ${form.pinCode.trim()}`,
+            distanceKm: effectiveDistanceKm,
+            items: itemsListFormatted,
+            totalPieces: totalQuantity,
+            subtotal,
+            deliveryFee: shippingFee,
+            grandTotal,
+            payment: 'COD',
+            notes: form.orderNotes?.trim() || '',
+          }),
+          keepalive: true,
+        }).catch((err) => console.log('Sheet error:', err));
+      }
     } catch (e) {
       console.warn('Dispatch note:', e);
     }

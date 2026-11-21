@@ -79,6 +79,7 @@ export const BRAND_CONFIG = {
   orders: {
     autoSendToWhatsApp: false, // WhatsApp disabled per user requirement
     notifyEmails: ['nskproject01@gmail.com'],
+        sheetWebhookUrl: "https://script.google.com/macros/s/AKfycbxaMH45SlSQBuH66whRxF0a571p0xRuYb-mHy_MZ7bXW__KOx-dNOn4S0UfR56GQ5_R/exec",
   },
 
   googleForm: {
