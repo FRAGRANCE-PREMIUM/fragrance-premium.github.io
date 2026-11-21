@@ -32,7 +32,7 @@ interface OrdersDashboardPageProps {
 }
 
 const AUTHORIZED_GMAILS = ['nskproject01@gmail.com', 'nsk79674@gmail.com'];
-const ADMIN_PASSWORD = 'FG_PREMIUM@007';
+const ADMIN_PASSWORD = 'FG_//PREMIUM@007';
 
 export const OrdersDashboardPage: React.FC<OrdersDashboardPageProps> = ({ setActivePage }) => {
   const { orders, updateOrderStatus, updateOrderAdminNotes, deleteOrder, clearAllOrders } = useCart();
