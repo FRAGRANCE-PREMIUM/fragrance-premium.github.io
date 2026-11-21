@@ -120,7 +120,7 @@ Special Notes: ${order.customer.orderNotes || 'None'}
         </h1>
 
         <p className="text-sm text-[#182920]/80 max-w-md mx-auto leading-relaxed">
-          Thank you for choosing <strong className="text-[#143628] font-bold">{BRAND_CONFIG.brandName}</strong>. Your order has been placed in our store orders vault and prepared for cushioned dispatch.
+          Thank you for choosing <strong className="text-[#143628] font-bold">{BRAND_CONFIG.brandName}</strong>. Your order has been received and is being prepared for dispatch. We will contact you shortly to confirm.
         </p>
 
         <div className="inline-block bg-white border border-[#D5CEBF] px-4 py-1.5 rounded-full text-xs text-[#182920] shadow-xs font-medium">
@@ -179,7 +179,7 @@ Special Notes: ${order.customer.orderNotes || 'None'}
           <span>Placed On: {order.createdAt}</span>
           <span className="text-[#143628] font-semibold flex items-center gap-1 bg-[#E8F0EC] px-2.5 py-1 rounded-full">
             <PackageCheck className="w-3.5 h-3.5 text-[#143628]" />
-            Saved in Store Vault
+            Order Received
           </span>
         </div>
 
@@ -264,14 +264,6 @@ Special Notes: ${order.customer.orderNotes || 'None'}
         </button>
 
         <div className="flex items-center gap-3 w-full sm:w-auto">
-          <button
-            onClick={() => setActivePage('orders')}
-            className="flex-1 sm:flex-none px-5 py-2.5 rounded-lg border border-[#D5CEBF] bg-white hover:bg-[#FAF7F0] text-xs font-semibold text-[#143628] flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
-          >
-            <ClipboardList className="w-4 h-4 text-[#143628]" />
-            <span>Store Orders Vault</span>
-          </button>
-
           <button
             onClick={() => setActivePage('collection')}
             className="flex-1 sm:flex-none px-6 py-2.5 rounded-lg bg-[#143628] hover:bg-[#1F4D3B] text-white text-xs font-semibold tracking-wider flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer"

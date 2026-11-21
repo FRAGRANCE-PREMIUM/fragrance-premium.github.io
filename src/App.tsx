@@ -78,6 +78,17 @@ function AppContent() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [activePage]);
 
+    useEffect(() => {
+    const openAdminFromHash = () => {
+      if (window.location.hash === '#admin-vault-8924') {
+        setActivePage('orders');
+      }
+    };
+    openAdminFromHash();
+    window.addEventListener('hashchange', openAdminFromHash);
+    return () => window.removeEventListener('hashchange', openAdminFromHash);
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#FAF7F0] text-[#182920] flex flex-col selection:bg-[#143628] selection:text-[#FAF7F0]">
       {/* Instant Add to Bag Top Notification & Direct Order Popup */}

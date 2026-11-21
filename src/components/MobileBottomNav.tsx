@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Compass, Sparkles, ShoppingBag, Shield } from 'lucide-react';
+import { Home, Compass, Sparkles, ShoppingBag, ClipboardList } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { ActivePage } from '../types';
 
@@ -9,14 +9,14 @@ interface MobileBottomNavProps {
 }
 
 export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ activePage, setActivePage }) => {
-  const { totalQuantity, setIsCartOpen, orders } = useCart();
+    const { totalQuantity, setIsCartOpen } = useCart();
 
   const navItems = [
     { label: 'HOME', page: 'home' as ActivePage, icon: Home },
     { label: 'GUIDE', page: 'guide' as ActivePage, icon: Compass },
     { label: 'ATTARS', page: 'collection' as ActivePage, icon: Sparkles },
     { label: 'BAG', isBag: true, icon: ShoppingBag },
-    { label: 'VAULT', page: 'orders' as ActivePage, icon: Shield, badge: orders.length },
+    { label: 'ORDER', page: 'order-details' as ActivePage, icon: ClipboardList, badge: 0 },
   ];
 
   return (

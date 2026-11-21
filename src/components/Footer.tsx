@@ -27,7 +27,6 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage, openPolicy, openD
   const navLinks: { label: string; page?: ActivePage }[] = [
     { label: 'Shop All Attars', page: 'collection' },
     { label: 'The Art of Attar Guide', page: 'guide' },
-    { label: '🛡️ Store Orders Vault (Admin)', page: 'orders' },
     { label: 'Curated Brands (Al Nuaim, Almas, etc.)', page: 'brands' },
     { label: 'Customer Reviews', page: 'reviews' },
     { label: 'Contact & Support', page: 'contact' },
@@ -92,17 +91,6 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage, openPolicy, openD
                   </button>
                 </li>
               ))}
-              {openDownloadModal && (
-                <li>
-                  <button
-                    onClick={openDownloadModal}
-                    className="text-[#C5A86A] font-bold hover:underline transition-colors text-left cursor-pointer flex items-center gap-1.5 pt-1"
-                  >
-                    <Download className="w-3.5 h-3.5 text-[#C5A86A]" />
-                    <span>Download Main Code Files (Single Files)</span>
-                  </button>
-                </li>
-              )}
             </ul>
           </div>
 
@@ -199,27 +187,13 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage, openPolicy, openD
         </div>
 
         {/* Bottom Bar: Copyright & Store Orders Dashboard link */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#FAF7F0]/60 gap-4">
-          <p>© {new Date().getFullYear()} {BRAND_CONFIG.brandName}. All rights reserved.</p>
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => {
-                setActivePage('orders');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="text-[#FAF7F0] hover:text-[#C5A86A] flex items-center gap-1.5 underline decoration-[#C5A86A]/40"
-            >
-              <ClipboardList className="w-3.5 h-3.5 text-[#C5A86A]" />
-              <span>Store Orders Console</span>
-            </button>
+        
             <span>·</span>
             <div className="flex items-center gap-1 text-[11px]">
               <span>Royal artisanal heritage</span>
               <Heart className="w-3 h-3 text-[#C5A86A] inline fill-[#C5A86A]" />
             </div>
           </div>
-        </div>
-      </div>
     </footer>
   );
 };
