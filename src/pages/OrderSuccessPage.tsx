@@ -128,51 +128,66 @@ Special Notes: ${order.customer.orderNotes || 'None'}
         </div>
       </div>
 
-      {/* Gmail Notification & 1-Click Send Button */}
-      <div className="p-5 rounded-2xl bg-[#ECFDF5] border border-[#10B981]/50 text-[#065F46] space-y-3 shadow-xs">
-        <div className="flex items-center gap-2 font-bold text-sm sm:text-base">
-          <Mail className="w-5 h-5 text-[#10B981] flex-shrink-0" />
-          <span>Official Store Dispatch Target: nskproject01@gmail.com</span>
+            {/* What happens next - customer friendly */}
+      <div className="rounded-2xl bg-white border border-[#D5CEBF] shadow-sm overflow-hidden">
+        <div className="bg-[#143628] px-5 py-3 flex items-center gap-2">
+          <Sparkles className="w-4 h-4 text-[#C5A86A]" />
+          <h2 className="font-serif text-sm sm:text-base font-bold text-[#FAF7F0] tracking-wide">
+            What Happens Next
+          </h2>
         </div>
-        <p className="text-xs text-[#065F46]/90 leading-relaxed">
-          Order receipt has been prepared and transmitted to the official store mailbox: <strong className="font-mono bg-white px-2 py-0.5 rounded border border-[#10B981]/40 text-[#143628]">nskproject01@gmail.com</strong>.
-        </p>
 
-        {/* 1-Click Open in Gmail App */}
-        <div className="pt-1 flex flex-col sm:flex-row items-center gap-2.5">
-          <a
-            href={mailtoUrl}
-            className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#143628] hover:bg-[#1F4D3B] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95 cursor-pointer"
-          >
-            <Mail className="w-4 h-4 text-[#C5A86A]" />
-            <span>Open in Gmail App / Send Direct Order Copy</span>
-          </a>
+        <div className="p-5 sm:p-6 grid gap-4 sm:grid-cols-3">
+          <div className="flex sm:flex-col items-start sm:items-center sm:text-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-[#E8F0EC] border border-[#143628]/15 flex items-center justify-center flex-shrink-0">
+              <CheckCircle className="w-5 h-5 text-[#143628]" />
+            </div>
+            <div>
+              <h3 className="text-xs font-bold text-[#143628] uppercase tracking-wider">1. Order Received</h3>
+              <p className="text-[11px] text-[#617367] leading-relaxed mt-0.5">
+                Your order <strong className="text-[#143628]">{order.orderId}</strong> is safely with us.
+              </p>
+            </div>
+          </div>
 
+          <div className="flex sm:flex-col items-start sm:items-center sm:text-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-[#E8F0EC] border border-[#143628]/15 flex items-center justify-center flex-shrink-0">
+              <Phone className="w-5 h-5 text-[#143628]" />
+            </div>
+            <div>
+              <h3 className="text-xs font-bold text-[#143628] uppercase tracking-wider">2. We Call You</h3>
+              <p className="text-[11px] text-[#617367] leading-relaxed mt-0.5">
+                We will call <strong className="text-[#143628]">+91 {order.customer.phone}</strong> to confirm your address and delivery time.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex sm:flex-col items-start sm:items-center sm:text-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-[#E8F0EC] border border-[#143628]/15 flex items-center justify-center flex-shrink-0">
+              <PackageCheck className="w-5 h-5 text-[#143628]" />
+            </div>
+            <div>
+              <h3 className="text-xs font-bold text-[#143628] uppercase tracking-wider">3. Pay On Delivery</h3>
+              <p className="text-[11px] text-[#617367] leading-relaxed mt-0.5">
+                Your attars arrive sealed and cushioned. Pay cash when you receive them.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="px-5 sm:px-6 pb-5 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-[#D5CEBF]/60 pt-4">
+          <p className="text-[11px] text-[#7A664F] text-center sm:text-left">
+            Need to change something? Call us anytime, {BRAND_CONFIG.contact.businessHours}.
+          </p>
           <a
             href={`tel:${BRAND_CONFIG.contact.phone}`}
-            className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-white border border-[#10B981] text-[#065F46] font-bold text-xs flex items-center justify-center gap-1.5 hover:bg-[#FAF7F0] transition-colors"
+            className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#143628] hover:bg-[#1F4D3B] text-[#FAF7F0] font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors shadow-xs"
           >
-            <Phone className="w-3.5 h-3.5 text-[#10B981]" />
-            <span>Call Store: {BRAND_CONFIG.contact.phone}</span>
+            <Phone className="w-3.5 h-3.5 text-[#C5A86A]" />
+            <span>Call {BRAND_CONFIG.contact.phone}</span>
           </a>
         </div>
-
-        {/* Store Owner FormSubmit Activation Helper */}
-        <div className="pt-3 border-t border-[#10B981]/30 text-[11px] text-[#065F46]/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-          <span>
-            ⚠️ <strong>Store Owner (nskproject01@gmail.com):</strong> If this is your first test, check <strong>Spam / Promotions</strong> in your Gmail to click the 1-time &quot;Activate Form&quot; button.
-          </span>
-          <button
-            type="button"
-            onClick={handleSendTestActivation}
-            disabled={isSendingTest || testSent}
-            className="px-3 py-1 rounded-lg bg-emerald-700 text-white font-bold text-[10px] uppercase hover:bg-emerald-800 transition-colors self-start sm:self-auto cursor-pointer flex-shrink-0"
-          >
-            {isSendingTest ? 'Sending...' : testSent ? 'Test Ping Sent ✓' : 'Send Test Ping to nskproject01@gmail.com'}
-          </button>
-        </div>
       </div>
-
       {/* Order Details Card */}
       <div className="bg-white border border-[#D5CEBF] rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
         <div className="flex items-center justify-between pb-3 border-b border-[#D5CEBF]/60 text-xs text-[#617367]">
