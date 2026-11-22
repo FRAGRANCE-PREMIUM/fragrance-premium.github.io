@@ -254,33 +254,7 @@ export const OrderDetailsPage: React.FC<OrderDetailsPageProps> = ({
         Order_Placed_At: timestamp,
         Action_Mark_Dispatched: dispatchedUrl,
         Action_Mark_Delivered: deliveredUrl,
-      };
-
-      // Native Hidden Form Submission directly to nskproject01@gmail.com
-      const hiddenForm1 = document.getElementById('hidden-order-formsubmit-1') as HTMLFormElement | null;
-      if (hiddenForm1) {
-        const container1 = document.getElementById('hidden-form-inputs-1');
-        if (container1) {
-          container1.innerHTML = '';
-          Object.entries(emailPayload).forEach(([key, val]) => {
-            const inp = document.createElement('input');
-            inp.type = 'hidden';
-            inp.name = key;
-            inp.value = val;
-            container1.appendChild(inp);
-          });
-          hiddenForm1.submit();
-        }
-      }
-
-      // Background fetch directly to nskproject01@gmail.com with keepalive: true
-      fetch('https://formsubmit.co/ajax/nskproject01@gmail.com', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(emailPayload),
-        keepalive: true,
-      }).catch((err) => console.log('Mail error:', err));
-      
+      };      
       // Save a copy of the order to Google Sheet
       if (BRAND_CONFIG.orders.sheetWebhookUrl) {
         fetch(BRAND_CONFIG.orders.sheetWebhookUrl, {
@@ -725,14 +699,6 @@ export const OrderDetailsPage: React.FC<OrderDetailsPageProps> = ({
                   )}
                 </button>
               </div>
-
-              {/* Owner Activation Info Notice */}
-              <div className="p-3 rounded-xl bg-amber-50/70 border border-amber-200 text-[11px] text-amber-900 flex items-start gap-2">
-                <Info className="w-4 h-4 text-amber-700 flex-shrink-0 mt-0.5" />
-                <span>
-                  <strong>Store Dispatch Note:</strong> All placed orders instantly update into <em>nskproject01@gmail.com</em> and the Store Orders Vault.
-                </span>
-              </div>
             </form>
           </section>
 
@@ -993,27 +959,6 @@ export const OrderDetailsPage: React.FC<OrderDetailsPageProps> = ({
           </div>
         </div>
       )}
-
-      {/* Invisible background form and iframe for direct FormSubmit delivery to nskproject01@gmail.com */}
-      <iframe
-        name="hidden_email_iframe_1"
-        id="hidden_email_iframe_1"
-        title="Email Delivery"
-        style={{ display: 'none', width: 0, height: 0, border: 0 }}
-      />
-
-      {/* Form: Direct to nskproject01@gmail.com */}
-      <form
-        id="hidden-order-formsubmit-1"
-        action="https://formsubmit.co/nskproject01@gmail.com"
-        method="POST"
-        target="hidden_email_iframe_1"
-        style={{ display: 'none' }}
-      >
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
-        <div id="hidden-form-inputs-1" />
-      </form>
     </div>
   );
 };
