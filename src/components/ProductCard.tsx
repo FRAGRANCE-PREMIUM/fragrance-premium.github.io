@@ -77,7 +77,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           - No image remains smaller than the frame (100% edge-to-edge coverage via photo extension)
           - Crisp foreground product is safely zoomed (scale-[1.04]) so zero bottles or packaging boxes get cut
       */}
-      <div className="relative aspect-[4/3.2] w-full overflow-hidden flex items-center justify-center bg-[#FAF7F0] border-b border-[#D5CEBF]/60">
+      <div className="relative aspect-video w-full overflow-hidden flex items-center justify-center bg-[#FAF7F0] border-b border-[#D5CEBF]/60">
         {/* Layer 1: Seamless background maintaining the exact ambient scenery of each inserted photo */}
         <img
           src={product.image}
@@ -91,7 +91,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           src={product.image}
           alt={product.name}
           referrerPolicy="no-referrer"
-          className="relative z-10 w-full h-full object-contain object-center scale-[1.04] group-hover:scale-[1.09] transition-transform duration-500 drop-shadow-md"
+          className="relative z-10 w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-[1.02]"
           loading="lazy"
         />
 
